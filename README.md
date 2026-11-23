@@ -35,10 +35,10 @@ If `output_dir` is not specified, only the `xr.Dataset` is return, otherwise net
 from pysprof import sprof_multi, sprof_mono
 
 # Create the multi-profile synthetic file: 
-sprof_multi(input_dir: Path, Optional[output_dir]: Path = None)
+sprof_multi(wmo_input_dir: Path, Optional[output_dir]: Path = None, core_wmo_input_dir: Optional[Path], b_wmo_input_dir: Optional[Path])
 
 # Create one or more single mono-profile file(s):
-sprof_mono(input_dir: Path, cyc: int | List[int], Optional[output_dir]: Path = None)
+sprof_mono(wmo_input_dir: Path, cyc: int | List[int], Optional[output_dir]: Path = None, core_wmo_input_dir: Optional[Path], b_wmo_input_dir: Optional[Path])
 ```
 
 As a ``cli``:
