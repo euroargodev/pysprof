@@ -24,7 +24,9 @@ af = ar.ArgoFloat(6903091)
 af.sprof.make_multi(Optional[output_dir]: Path = None)
 
 # Create one or more single mono-profile file(s):
-af.sprof.make_mono(cyc: int | List[int], Optional[output_dir]: Path = None)  
+af.sprof.make_mono(cyc: int | List[int], 
+                   Optional[output_dir]: Path = None
+                )  
 ```
 
 ### Standalone application
@@ -35,10 +37,19 @@ If `output_dir` is not specified, only the `xr.Dataset` is return, otherwise net
 from pysprof import sprof_multi, sprof_mono
 
 # Create the multi-profile synthetic file: 
-sprof_multi(wmo_input_dir: Path, Optional[output_dir]: Path = None, core_wmo_input_dir: Optional[Path], b_wmo_input_dir: Optional[Path])
+sprof_multi(wmo_input_dir: Path,   # Source dir for core and B mono-profile file
+            Optional[output_dir]: Path = None, 
+            core_wmo_input_dir: Optional[Path] = None,  # Superseed source dir for core files
+            b_wmo_input_dir: Optional[Path] = None,  # Superseed source dir for B files
+        )
 
 # Create one or more single mono-profile file(s):
-sprof_mono(wmo_input_dir: Path, cyc: int | List[int], Optional[output_dir]: Path = None, core_wmo_input_dir: Optional[Path], b_wmo_input_dir: Optional[Path])
+sprof_mono(wmo_input_dir: Path,  # Source dir for core and B mono-profile files
+            cyc: int | List[int], 
+            Optional[output_dir]: Path = None, 
+            core_wmo_input_dir: Optional[Path] = None,  # Superseed source dir for core files
+            b_wmo_input_dir: Optional[Path] = None,  # Superseed source dir for B files
+        )
 ```
 
 As a ``cli``:
