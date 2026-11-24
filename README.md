@@ -37,7 +37,7 @@ If `output_dir` is not specified, only the `xr.Dataset` is return, otherwise net
 from pysprof import sprof_multi, sprof_mono
 
 # Create the multi-profile synthetic file: 
-sprof_multi(wmo_input_dir: Path,   # Source dir for core and B mono-profile file
+sprof_multi(wmo_input_dir: Path,  # Source dir for core and B mono-profile files
             Optional[output_dir]: Path = None, 
             core_wmo_input_dir: Optional[Path] = None,  # Superseed source dir for core files
             b_wmo_input_dir: Optional[Path] = None,  # Superseed source dir for B files
